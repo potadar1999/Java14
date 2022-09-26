@@ -1,0 +1,46 @@
+Explain about Hashcode and Equals Method
+
+
+Hash code: A HashCode is an integer value associated withevety object in java,
+to get this hasacode value for an object, we can use the hashcode() Method. hashcode
+ means it's return the integer hashcode value of the given obect.
+Hashcode value is mostly used in hashing based collections 
+like HashMap,Hashset, hashTable...etc
+and this method must be overriden in every class which overrides equal() Method.
+
+Syntax=
+
+
+		@Override
+		public int hashCode() {
+			return this.bookId;
+		}
+
+this method return the hash code value
+for the object on which this method is invoked
+this is belongs to java.lang.object
+
+
+
+equals() Method
+equal method is compare two string and return true if the strings are equal,
+The point of equal Method calls the GetType method to determine whether the run-time
+type s of two object are idential
+
+Syntax=
+public boolean equals(Object obj)
+
+	@Override
+		public boolean equals(Object obj) {
+			Book o=(Book)obj;
+			if(this.bookId==o.bookId)
+				return true;
+			else {
+				return false;
+			}
+		}
+
+this method checks if some other Object
+passed to it as an argument is equal to the object on which this method is invoked
+this is belongs to java.lang.object
+
